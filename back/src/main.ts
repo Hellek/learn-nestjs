@@ -8,7 +8,7 @@ async function bootstrap() {
   const port = configService.get('BACK_APP_PORT');
 
   app.enableCors({
-    allowedHeaders: ['Access-Control-Allow-Origin'],
+    allowedHeaders: ['Access-Control-Allow-Origin', 'Content-Type'],
   });
 
   await app.listen(port).then(() => {
