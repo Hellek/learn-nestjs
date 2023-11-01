@@ -1,0 +1,29 @@
+{
+  "name": "tinkoff-invest-app",
+  "workspaces": [
+    "back",
+    "front"
+  ],
+  "version": "0.1.0",
+  "description": "Alternative Tinkoff Invest app",
+  "author": "Roman Basharin",
+  "private": true,
+  "license": "UNLICENSED",
+  "engines": {
+    "node": "18",
+    "npm": "9"
+  },
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@types/node": "18.18.7",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.42.0",
+    "husky": "8.0.3",
+    "lint-staged": "12.4.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.3"
+  }
+}
