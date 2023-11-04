@@ -43,6 +43,7 @@ module.exports = {
     'array-bracket-spacing': 'warn',
     'object-curly-newline': 'warn',
     'object-curly-spacing': 'warn',
+    'arrow-body-style': 'warn',
     semi: [
       'warn',
       'never',
