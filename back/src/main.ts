@@ -11,6 +11,7 @@ async function bootstrap() {
     allowedHeaders: ['Access-Control-Allow-Origin', 'Content-Type'],
   });
 
+  if (port.length < 1) throw Error('BACK_APP_PORT port is not defined');
   await app.listen(port).then(() => {
     console.log(`App is served on: http://localhost:${port}`);
   });
