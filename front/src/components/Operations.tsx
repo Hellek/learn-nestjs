@@ -1,7 +1,7 @@
 import { Button } from 'antd'
 import { useStore } from 'effector-react'
 
-import { api } from '@app/invest-api/apiClient'
+import { investApi } from '@app/invest-api/apiClient'
 import {
   $currentAccountId, $oldestAccount, Account,
 } from '@models/users/accounts'
@@ -64,7 +64,7 @@ const getOperations = async ({
       hasNext,
       items,
       // eslint-disable-next-line no-await-in-loop
-    } = await api.fetch('OperationsService/GetOperationsByCursor', {
+    } = await investApi.fetch('OperationsService/GetOperationsByCursor', {
       limit: 1000,
       ...request,
     })

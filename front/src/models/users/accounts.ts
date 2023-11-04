@@ -2,7 +2,7 @@ import {
   createEffect, createEvent, createStore, sample,
 } from 'effector'
 
-import { api, ResponseType } from '@app/invest-api/apiClient'
+import { investApi, ResponseType } from '@app/invest-api/apiClient'
 
 // Types
 export type Accounts = Required<ResponseType<'UsersService/GetAccounts'>>['accounts']
@@ -33,7 +33,7 @@ export const $oldestAccount = $accounts.map(accounts => accounts?.sort((a, b) =>
 
 // Events
 export const getAccountsEvent = createEvent('getAccountsEvent')
-export const fetchAccountsFx = createEffect(() => api.fetch('UsersService/GetAccounts').then(r => r.accounts))
+export const fetchAccountsFx = createEffect(() => investApi.fetch('UsersService/GetAccounts').then(r => r.accounts))
 export const setCurrentAccountIdEvent = createEvent<string>('setCurrentAccountIdEvent')
 
 // Subscriptions
