@@ -30,22 +30,6 @@ export const $oldestAccount = $accounts.map(accounts => accounts?.sort((a, b) =>
 
   return (new Date(a.openedDate)).getFullYear() - (new Date(b.openedDate)).getFullYear()
 })[0])
-export const $yearsAsClient = $oldestAccount.map(oldestAccount => {
-  if (!oldestAccount?.openedDate) return []
-
-  const openedDateYear = new Date(oldestAccount.openedDate).getFullYear()
-  const currentYear = new Date().getFullYear()
-  const range = [openedDateYear]
-
-  while (range.at(-1) !== currentYear) {
-    const lastValue = range.at(-1)
-    if (typeof lastValue === 'undefined') return range
-
-    range.push(lastValue + 1)
-  }
-
-  return range
-})
 
 // Events
 export const getAccountsEvent = createEvent('getAccountsEvent')
