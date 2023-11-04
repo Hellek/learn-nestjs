@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Button } from 'antd'
 import { useStore } from 'effector-react'
 
@@ -33,7 +34,6 @@ const getOperations = async ({
   oldestAccount,
   cursor,
 }: FirstRequest | CursorRequest) => {
-  let pageNumber = 0
   let hasMoreItems = true
   const allItems = []
   const oldestAccountOpenedDate = oldestAccount?.openedDate || ''
@@ -83,15 +83,13 @@ const getOperations = async ({
     }
 
     hasMoreItems = !!hasNext
-
-    download(JSON.stringify(items, null, 2), `operations-${pageNumber}.json`, 'application/json')
-    pageNumber += 1
   }
 
   return allItems
 }
 
 export const Operations = () => {
+  const [isExporting, setIsExporting] = useState(false)
   const currentAccountId = useStore($currentAccountId)
   const oldestAccount = useStore($oldestAccount)
 
@@ -99,8 +97,15 @@ export const Operations = () => {
     <div>
       <Button
         onClick={() => {
-          getOperations({ accountId: currentAccountId, oldestAccount })
+          setIsExporting(true)
+
+          getOperations({ accountId: currentAccountId, oldestAccount }).then(all => {
+            download(JSON.stringify(all), 'all-operations.json', 'application/json')
+          }).finally(() => {
+            setIsExporting(false)
+          })
         }}
+        loading={isExporting}
       >
         Выгрузить операции
       </Button>
