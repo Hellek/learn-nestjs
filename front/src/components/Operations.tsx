@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Button } from 'antd'
 import { useStore } from 'effector-react'
 
+import { commonApi } from '@app/common-api/apiClient'
 import { investApi } from '@app/invest-api/apiClient'
 import {
   $currentAccountId, $oldestAccount, Account,
@@ -92,6 +93,13 @@ export const Operations = () => {
   const [isExporting, setIsExporting] = useState(false)
   const currentAccountId = useStore($currentAccountId)
   const oldestAccount = useStore($oldestAccount)
+
+  useEffect(() => {
+    commonApi.fetch('operations', {
+      method: 'get',
+    })
+      .then(res => { console.log(res) })
+  }, [])
 
   return (
     <div>

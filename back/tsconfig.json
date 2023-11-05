@@ -5,6 +5,7 @@
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "resolveJsonModule": true, // Allow to import *.json files
     "allowSyntheticDefaultImports": true,
     "target": "ES2021",
     "sourceMap": true,
