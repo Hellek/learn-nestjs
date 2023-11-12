@@ -10,6 +10,7 @@ import {
 
 type BaseRequest = {
   accountId: string
+  partialSave(operations: unknown[]): void
 }
 
 type FirstRequest = BaseRequest & {
@@ -33,10 +34,11 @@ function download(content: string, fileName: string, contentType: string) {
 const getOperations = async ({
   accountId,
   oldestAccount,
+  partialSave,
   cursor,
 }: FirstRequest | CursorRequest) => {
   let hasMoreItems = true
-  const allItems = []
+  // const allItems = []
   const oldestAccountOpenedDate = oldestAccount?.openedDate || ''
   const nextFullYear = (new Date().getFullYear() + 1)
   const nextFullYearISO = (new Date(`${nextFullYear}`)).toISOString()
@@ -80,13 +82,14 @@ const getOperations = async ({
     }
 
     if (items && items.length > 0) {
-      allItems.push(...items)
+      partialSave(items)
+      // allItems.push(...items)
     }
 
     hasMoreItems = !!hasNext
   }
 
-  return allItems
+  // return allItems
 }
 
 export const Operations = () => {
@@ -98,20 +101,31 @@ export const Operations = () => {
     commonApi.fetch('operations', {
       method: 'get',
     })
-      .then(res => { console.log(res) })
+      .then(res => { console.log('get', res) })
   }, [])
 
   return (
     <div>
       <Button
-        onClick={() => {
+        onClick={async () => {
           setIsExporting(true)
 
-          getOperations({ accountId: currentAccountId, oldestAccount }).then(all => {
-            download(JSON.stringify(all), 'all-operations.json', 'application/json')
-          }).finally(() => {
+          const partialSave = (operations: unknown[]) => {
+            commonApi.fetch('operations', {
+              method: 'post',
+              body: JSON.stringify(operations),
+              headers: {
+                'Content-Type': 'application/json',
+              },
+            })
+          }
+
+          try {
+            await getOperations({ accountId: currentAccountId, oldestAccount, partialSave })
+            // download(JSON.stringify(all), 'all-operations.json', 'application/json')
+          } finally {
             setIsExporting(false)
-          })
+          }
         }}
         loading={isExporting}
       >
