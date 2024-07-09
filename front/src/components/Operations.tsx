@@ -121,6 +121,7 @@ export const Operations = () => {
           }
 
           try {
+            // partialSave([new Date().toISOString()])
             await getOperations({ accountId: currentAccountId, oldestAccount, partialSave })
             // download(JSON.stringify(all), 'all-operations.json', 'application/json')
           } finally {

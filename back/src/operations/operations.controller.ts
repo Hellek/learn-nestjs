@@ -6,26 +6,37 @@ export class OperationsController {
   constructor(private operationsService: OperationsService) {}
 
   @Post()
-  async addOperations(@Body() body: Record<string, never>) {
-    console.log(body);
+  async addOperations(@Body() body: string[]) {
+    type Datetimes = {
+      datetimes: string[];
+    };
 
-    return { AA: 44 };
-    // type Data = {
-    //   messages: string[];
-    // };
+    const { JSONPreset } = await import('lowdb/node');
 
-    // const { JSONPreset } = await import('lowdb/node');
+    const defaultData: Datetimes = { datetimes: [] };
+    const db = await JSONPreset<Datetimes>('./src/operations/datetimes.json', defaultData);
 
-    // const defaultData: Data = { messages: [] };
-    // const db = await JSONPreset<Data>('operations.json', defaultData);
+    db.data.datetimes.push(...body);
+    db.write();
 
-    // db.data.messages.push('foo'); // ✅ Success
-    // db.write();
+    return { data: body, message: 'Записанные объекты' };
   }
 
   @Get()
-  getOperations() {
-    return ['123'];
+  async getOperations() {
+    type Datetimes = {
+      datetimes: string[];
+    };
+
+    const { JSONPreset } = await import('lowdb/node');
+
+    const defaultData: Datetimes = { datetimes: [] };
+    const db = await JSONPreset<Datetimes>('./src/operations/datetimes.json', defaultData);
+
+    await db.read();
+
+    return db.data.datetimes.length;
+
     // return this.operationsService.getOperationsFromFile();
   }
 }
