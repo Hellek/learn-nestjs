@@ -1,30 +1,5 @@
 import { AxiosResponse } from 'axios'
 
-import { ONE_GIGABYTE, ONE_MEGABYTE } from './constants'
-
-export const getHumanizedFileSize: (param: {
-  bytes: number
-  showBytesSuffix?: boolean
-  hideDecimals?: boolean
-}) => string = ({
-  bytes,
-  showBytesSuffix = true,
-  hideDecimals = false,
-}) => {
-  let bytesString = ' MB'
-  let integer = bytes / ONE_MEGABYTE
-
-  if (bytes < 10240) {
-    bytesString = ' KB'
-    integer = bytes / 1024
-  } else if (bytes > (ONE_MEGABYTE * 999)) {
-    bytesString = ' GB'
-    integer = bytes / ONE_GIGABYTE
-  }
-
-  return `${integer.toFixed(hideDecimals ? 0 : 2)}${showBytesSuffix ? bytesString : ''}`
-}
-
 export const downloadFile: (
   response: AxiosResponse,
   defaultFileName: string,
