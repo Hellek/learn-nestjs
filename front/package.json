@@ -24,8 +24,7 @@
     ]
   },
   "dependencies": {
-    "antd": "5.3.3",
-    "axios": "1.2.1",
+    "axios": "1.7.3",
     "effector": "22.3.0",
     "effector-react": "22.0.6",
     "react": "18.2.0",

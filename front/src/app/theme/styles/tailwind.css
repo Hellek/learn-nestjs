@@ -1,4 +1,4 @@
-@tailwind base; /* Content of "@layer base" content and TailWwind stuff like "::backdrop" */
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -22,14 +22,12 @@
   }
 
   html {
-    line-height: 1.5;
-    text-size-adjust: 100%;
     tab-size: 2;
     font-family: theme("fontFamily.sans");
   }
 
   body {
-    @apply m-0 text-black;
+    @apply m-0;
   }
 
   html,
@@ -45,10 +43,6 @@
   h1,
   h2 {
     @apply font-semibold;
-  }
-
-  a:hover {
-    @apply underline;
   }
 }
 

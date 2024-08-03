@@ -1,4 +1,3 @@
-import { Select } from 'antd'
 import { useEvent, useStore } from 'effector-react'
 
 import {
@@ -13,12 +12,18 @@ export const Accounts = () => {
 
   return (
     <div>
-      <Select
+      <select
         value={currentAccountId}
+        aria-label="accounts"
         className="w-60"
-        options={options}
-        onChange={setCurrentAccountId}
-      />
+        onChange={event => setCurrentAccountId(event.target.value)}
+      >
+        {options.map(({ label, value }) => (
+          <option key={value}>
+            {label}
+          </option>
+        ))}
+      </select>
     </div>
   )
 }

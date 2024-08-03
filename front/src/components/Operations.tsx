@@ -1,4 +1,3 @@
-import { Button } from 'antd'
 import { useStore } from 'effector-react'
 
 import { api } from '@app/invest-api/apiClient'
@@ -97,13 +96,14 @@ export const Operations = () => {
 
   return (
     <div>
-      <Button
+      <button
+        type="button"
         onClick={() => {
           getOperations({ accountId: currentAccountId, oldestAccount })
         }}
       >
         Выгрузить операции
-      </Button>
+      </button>
     </div>
   )
 }
