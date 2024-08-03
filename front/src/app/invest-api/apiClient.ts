@@ -17,9 +17,9 @@ class InvestAPIClient {
   }
 }
 
-const api = new InvestAPIClient()
+const investApi = new InvestAPIClient()
 
 export {
   type ResponseType,
-  api,
+  investApi,
 }
