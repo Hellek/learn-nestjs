@@ -1,9 +1,11 @@
-import { useStore } from 'effector-react'
+import { useRecoilValue } from 'recoil'
 
 import { investApi } from '@app/invest-api/apiClient'
 import {
-  $currentAccountId, $oldestAccount, Account,
-} from '@models/users/accounts'
+  Account,
+  currentAccountIdState,
+  oldestAccountState,
+} from '@models/accounts'
 
 type BaseRequest = {
   accountId: string
@@ -91,8 +93,8 @@ const getOperations = async ({
 }
 
 export const Operations = () => {
-  const currentAccountId = useStore($currentAccountId)
-  const oldestAccount = useStore($oldestAccount)
+  const currentAccountId = useRecoilValue(currentAccountIdState)
+  const oldestAccount = useRecoilValue(oldestAccountState)
 
   return (
     <div>

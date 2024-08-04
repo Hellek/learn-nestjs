@@ -1,16 +1,14 @@
 import { BrowserRouter, useRoutes } from 'react-router-dom'
-import { useGate, useStore } from 'effector-react'
+import { RecoilRoot } from 'recoil'
 
 import { publicRoutes } from '@app/routes'
-import { $isInitialsLoaded, AppGate } from '@models/app/initials'
+import { useGetInitials } from '@models/initials'
 import DefaultLayout from './DefaultLayout'
 
 const PublicRoute = () => useRoutes(Object.values(publicRoutes))
 
-const App = () => {
-  useGate(AppGate)
-
-  const isInitialsLoaded = useStore($isInitialsLoaded)
+const RecoiledApp = () => {
+  const isInitialsLoaded = useGetInitials()
 
   return (
     <BrowserRouter>
@@ -21,4 +19,8 @@ const App = () => {
   )
 }
 
-export default App
+export const App = () => (
+  <RecoilRoot>
+    <RecoiledApp />
+  </RecoilRoot>
+)

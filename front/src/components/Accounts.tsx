@@ -1,14 +1,13 @@
-import { useEvent, useStore } from 'effector-react'
+import { useRecoilState, useRecoilValue } from 'recoil'
 
 import {
-  $currentAccountId, $openedAccounts, setCurrentAccountIdEvent,
-} from '@models/users/accounts'
+  currentAccountIdState,
+  openedAccountsState,
+} from '@models/accounts'
 
 export const Accounts = () => {
-  const openedAccounts = useStore($openedAccounts)
-  const currentAccountId = useStore($currentAccountId)
-  const setCurrentAccountId = useEvent(setCurrentAccountIdEvent)
-  const options = openedAccounts.map(a => ({ value: a.id, label: a.name }))
+  const [currentAccountId, setCurrentAccountId] = useRecoilState(currentAccountIdState)
+  const openedAccounts = useRecoilValue(openedAccountsState)
 
   return (
     <div>
@@ -18,9 +17,9 @@ export const Accounts = () => {
         className="w-60"
         onChange={event => setCurrentAccountId(event.target.value)}
       >
-        {options.map(({ label, value }) => (
-          <option key={value}>
-            {label}
+        {openedAccounts.map(a => (
+          <option key={a.id}>
+            {a.name}
           </option>
         ))}
       </select>
