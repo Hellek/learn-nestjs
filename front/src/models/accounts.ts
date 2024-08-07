@@ -1,11 +1,13 @@
 import { atom, selector } from 'recoil'
 
-import { investApi, ResponseType } from '@app/invest-api/apiClient'
+import { api, V1Account } from '@app/api'
 
-export type Accounts = Required<ResponseType<'UsersService/GetAccounts'>>['accounts']
-export type Account = Accounts[0]
+export type Accounts = V1Account[]
+export type Account = V1Account
 
-export const fetchAccounts = investApi.fetch('UsersService/GetAccounts').then(r => r.accounts)
+export const fetchAccounts = api.tinkoffPublicInvestApiContractV1UsersService.usersServiceGetAccounts({})
+  .then(res => res.json())
+  .then(({ accounts }) => accounts)
 
 export const accountsState = atom<Accounts>({
   key: 'accountsState',

@@ -24,7 +24,7 @@ module.exports = (webpackEnv, { mode }) => {
   const isServing = 'WEBPACK_SERVE' in webpackEnv && webpackEnv.WEBPACK_SERVE === true
 
   setDotenvConfig(mode)
-  const { BACK_APP_PORT } = process.env
+  const { BACK_APP_PORT, AUTHORIZATION_TOKEN_REAL_READONLY } = process.env
   const git = getGitInfo()
 
   const basic = {
@@ -165,6 +165,7 @@ module.exports = (webpackEnv, { mode }) => {
     new webpack.DefinePlugin({
       'process.env.APP_VERSION': JSON.stringify(git.APP_VERSION),
       'process.env.BACK_APP_PORT': JSON.stringify(BACK_APP_PORT),
+      'process.env.AUTHORIZATION_TOKEN_REAL_READONLY': JSON.stringify(AUTHORIZATION_TOKEN_REAL_READONLY),
     }),
     !isServing && new MiniCssExtractPlugin({
       filename: getFilename(isServing, 'css'),

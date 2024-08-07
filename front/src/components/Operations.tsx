@@ -1,6 +1,6 @@
 import { useRecoilValue } from 'recoil'
 
-import { investApi } from '@app/invest-api/apiClient'
+import { api } from '@app/api'
 import {
   Account,
   currentAccountIdState,
@@ -65,10 +65,10 @@ const getOperations = async ({
       hasNext,
       items,
       // eslint-disable-next-line no-await-in-loop
-    } = await investApi.fetch('OperationsService/GetOperationsByCursor', {
+    } = await api.tinkoffPublicInvestApiContractV1OperationsService.operationsServiceGetOperationsByCursor({
       limit: 1000,
       ...request,
-    })
+    }).then(r => r.json())
 
     if (typeof nextCursor === 'undefined') {
       throw new Error('nextCursor us undefined')

@@ -11,7 +11,7 @@ export class InvestApiService {
   readonly contractUrl = 'tinkoff.public.invest.api.contract.v1.';
 
   readonly realToken = this.isAuthRealTokenReadonly
-    ? process.env.authorizationToken_realReadonly
+    ? process.env.AUTHORIZATION_TOKEN_REAL_READONLY
     : process.env.authorizationToken_realFullAccess;
 
   readonly authorizationToken = this.isSandbox ? process.env.authorizationToken_sandbox : this.realToken;
