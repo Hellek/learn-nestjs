@@ -3352,7 +3352,7 @@ export class HttpClient<SecurityDataType = unknown> {
  * @contact <al.a.volkov@tinkoff.ru>
  */
 export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDataType> {
-  tinkoffPublicInvestApiContractV1InstrumentsService = {
+  InstrumentsService = {
     /**
      * No description
      *
@@ -3947,7 +3947,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         ...params,
       }),
   };
-  tinkoffPublicInvestApiContractV1MarketDataService = {
+  MarketDataService = {
     /**
      * No description
      *
@@ -4102,7 +4102,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         ...params,
       }),
   };
-  tinkoffPublicInvestApiContractV1MarketDataStreamService = {
+  MarketDataStreamService = {
     /**
      * No description
      *
@@ -4150,7 +4150,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         ...params,
       }),
   };
-  tinkoffPublicInvestApiContractV1OperationsService = {
+  OperationsService = {
     /**
      * No description
      *
@@ -4310,7 +4310,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         ...params,
       }),
   };
-  tinkoffPublicInvestApiContractV1OperationsStreamService = {
+  OperationsStreamService = {
     /**
      * No description
      *
@@ -4355,7 +4355,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         ...params,
       }),
   };
-  tinkoffPublicInvestApiContractV1OrdersService = {
+  OrdersService = {
     /**
      * No description
      *
@@ -4466,7 +4466,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         ...params,
       }),
   };
-  tinkoffPublicInvestApiContractV1OrdersStreamService = {
+  OrdersStreamService = {
     /**
      * No description
      *
@@ -4489,7 +4489,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         ...params,
       }),
   };
-  tinkoffPublicInvestApiContractV1SandboxService = {
+  SandboxService = {
     /**
      * No description
      *
@@ -4798,7 +4798,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         ...params,
       }),
   };
-  tinkoffPublicInvestApiContractV1StopOrdersService = {
+  StopOrdersService = {
     /**
      * No description
      *
@@ -4865,7 +4865,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         ...params,
       }),
   };
-  tinkoffPublicInvestApiContractV1UsersService = {
+  UsersService = {
     /**
      * No description
      *

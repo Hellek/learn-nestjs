@@ -5,7 +5,7 @@ import { api, V1Account } from '@app/api'
 export type Accounts = V1Account[]
 export type Account = V1Account
 
-export const fetchAccounts = api.tinkoffPublicInvestApiContractV1UsersService.usersServiceGetAccounts({})
+export const fetchAccounts = api.UsersService.usersServiceGetAccounts({})
   .then(res => res.json())
   .then(({ accounts }) => accounts)
 
