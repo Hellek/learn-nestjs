@@ -65,7 +65,7 @@ const getOperations = async ({
       hasNext,
       items,
       // eslint-disable-next-line no-await-in-loop
-    } = await api.OperationsService.operationsServiceGetOperationsByCursor({
+    } = await api.OperationsService.GetOperationsByCursor({
       limit: 1000,
       ...request,
     }).then(r => r.json())

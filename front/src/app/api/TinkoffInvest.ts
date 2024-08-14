@@ -3357,14 +3357,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags InstrumentsService
-     * @name InstrumentsServiceBondBy
+     * @name BondBy
      * @summary Метод получения облигации по её идентификатору.
      * @request POST:/tinkoff.public.invest.api.contract.v1.InstrumentsService/BondBy
      * @secure
      * @response `200` `V1BondResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    instrumentsServiceBondBy: (data: V1InstrumentRequest, params: RequestParams = {}) =>
+    BondBy: (data: V1InstrumentRequest, params: RequestParams = {}) =>
       this.request<V1BondResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.InstrumentsService/BondBy`,
         method: "POST",
@@ -3379,14 +3379,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags InstrumentsService
-     * @name InstrumentsServiceBonds
+     * @name Bonds
      * @summary Метод получения списка облигаций.
      * @request POST:/tinkoff.public.invest.api.contract.v1.InstrumentsService/Bonds
      * @secure
      * @response `200` `V1BondsResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    instrumentsServiceBonds: (data: V1InstrumentsRequest, params: RequestParams = {}) =>
+    Bonds: (data: V1InstrumentsRequest, params: RequestParams = {}) =>
       this.request<V1BondsResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.InstrumentsService/Bonds`,
         method: "POST",
@@ -3401,14 +3401,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags InstrumentsService
-     * @name InstrumentsServiceCurrencies
+     * @name Currencies
      * @summary Метод получения списка валют.
      * @request POST:/tinkoff.public.invest.api.contract.v1.InstrumentsService/Currencies
      * @secure
      * @response `200` `V1CurrenciesResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    instrumentsServiceCurrencies: (data: V1InstrumentsRequest, params: RequestParams = {}) =>
+    Currencies: (data: V1InstrumentsRequest, params: RequestParams = {}) =>
       this.request<V1CurrenciesResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.InstrumentsService/Currencies`,
         method: "POST",
@@ -3423,14 +3423,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags InstrumentsService
-     * @name InstrumentsServiceCurrencyBy
+     * @name CurrencyBy
      * @summary Метод получения валюты по её идентификатору.
      * @request POST:/tinkoff.public.invest.api.contract.v1.InstrumentsService/CurrencyBy
      * @secure
      * @response `200` `V1CurrencyResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    instrumentsServiceCurrencyBy: (data: V1InstrumentRequest, params: RequestParams = {}) =>
+    CurrencyBy: (data: V1InstrumentRequest, params: RequestParams = {}) =>
       this.request<V1CurrencyResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.InstrumentsService/CurrencyBy`,
         method: "POST",
@@ -3445,14 +3445,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags InstrumentsService
-     * @name InstrumentsServiceEditFavorites
+     * @name EditFavorites
      * @summary Метод редактирования списка избранных инструментов.
      * @request POST:/tinkoff.public.invest.api.contract.v1.InstrumentsService/EditFavorites
      * @secure
      * @response `200` `V1EditFavoritesResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    instrumentsServiceEditFavorites: (data: V1EditFavoritesRequest, params: RequestParams = {}) =>
+    EditFavorites: (data: V1EditFavoritesRequest, params: RequestParams = {}) =>
       this.request<V1EditFavoritesResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.InstrumentsService/EditFavorites`,
         method: "POST",
@@ -3467,14 +3467,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags InstrumentsService
-     * @name InstrumentsServiceEtfBy
+     * @name EtfBy
      * @summary Метод получения инвестиционного фонда по его идентификатору.
      * @request POST:/tinkoff.public.invest.api.contract.v1.InstrumentsService/EtfBy
      * @secure
      * @response `200` `V1EtfResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    instrumentsServiceEtfBy: (data: V1InstrumentRequest, params: RequestParams = {}) =>
+    EtfBy: (data: V1InstrumentRequest, params: RequestParams = {}) =>
       this.request<V1EtfResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.InstrumentsService/EtfBy`,
         method: "POST",
@@ -3489,14 +3489,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags InstrumentsService
-     * @name InstrumentsServiceEtfs
+     * @name Etfs
      * @summary Метод получения списка инвестиционных фондов.
      * @request POST:/tinkoff.public.invest.api.contract.v1.InstrumentsService/Etfs
      * @secure
      * @response `200` `V1EtfsResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    instrumentsServiceEtfs: (data: V1InstrumentsRequest, params: RequestParams = {}) =>
+    Etfs: (data: V1InstrumentsRequest, params: RequestParams = {}) =>
       this.request<V1EtfsResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.InstrumentsService/Etfs`,
         method: "POST",
@@ -3511,14 +3511,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags InstrumentsService
-     * @name InstrumentsServiceFindInstrument
+     * @name FindInstrument
      * @summary Метод поиска инструмента.
      * @request POST:/tinkoff.public.invest.api.contract.v1.InstrumentsService/FindInstrument
      * @secure
      * @response `200` `V1FindInstrumentResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    instrumentsServiceFindInstrument: (data: V1FindInstrumentRequest, params: RequestParams = {}) =>
+    FindInstrument: (data: V1FindInstrumentRequest, params: RequestParams = {}) =>
       this.request<V1FindInstrumentResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.InstrumentsService/FindInstrument`,
         method: "POST",
@@ -3533,14 +3533,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags InstrumentsService
-     * @name InstrumentsServiceFutureBy
+     * @name FutureBy
      * @summary Метод получения фьючерса по его идентификатору.
      * @request POST:/tinkoff.public.invest.api.contract.v1.InstrumentsService/FutureBy
      * @secure
      * @response `200` `V1FutureResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    instrumentsServiceFutureBy: (data: V1InstrumentRequest, params: RequestParams = {}) =>
+    FutureBy: (data: V1InstrumentRequest, params: RequestParams = {}) =>
       this.request<V1FutureResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.InstrumentsService/FutureBy`,
         method: "POST",
@@ -3555,14 +3555,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags InstrumentsService
-     * @name InstrumentsServiceFutures
+     * @name Futures
      * @summary Метод получения списка фьючерсов.
      * @request POST:/tinkoff.public.invest.api.contract.v1.InstrumentsService/Futures
      * @secure
      * @response `200` `V1FuturesResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    instrumentsServiceFutures: (data: V1InstrumentsRequest, params: RequestParams = {}) =>
+    Futures: (data: V1InstrumentsRequest, params: RequestParams = {}) =>
       this.request<V1FuturesResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.InstrumentsService/Futures`,
         method: "POST",
@@ -3577,14 +3577,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags InstrumentsService
-     * @name InstrumentsServiceGetAccruedInterests
+     * @name GetAccruedInterests
      * @summary Метод получения накопленного купонного дохода по облигации.
      * @request POST:/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetAccruedInterests
      * @secure
      * @response `200` `V1GetAccruedInterestsResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    instrumentsServiceGetAccruedInterests: (data: V1GetAccruedInterestsRequest, params: RequestParams = {}) =>
+    GetAccruedInterests: (data: V1GetAccruedInterestsRequest, params: RequestParams = {}) =>
       this.request<V1GetAccruedInterestsResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetAccruedInterests`,
         method: "POST",
@@ -3599,14 +3599,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags InstrumentsService
-     * @name InstrumentsServiceGetAssetBy
+     * @name GetAssetBy
      * @summary Метод получения актива по его идентификатору.
      * @request POST:/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetAssetBy
      * @secure
      * @response `200` `V1AssetResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    instrumentsServiceGetAssetBy: (data: V1AssetRequest, params: RequestParams = {}) =>
+    GetAssetBy: (data: V1AssetRequest, params: RequestParams = {}) =>
       this.request<V1AssetResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetAssetBy`,
         method: "POST",
@@ -3621,14 +3621,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags InstrumentsService
-     * @name InstrumentsServiceGetAssets
+     * @name GetAssets
      * @summary Метод получения списка активов.
      * @request POST:/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetAssets
      * @secure
      * @response `200` `V1AssetsResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    instrumentsServiceGetAssets: (data: V1AssetsRequest, params: RequestParams = {}) =>
+    GetAssets: (data: V1AssetsRequest, params: RequestParams = {}) =>
       this.request<V1AssetsResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetAssets`,
         method: "POST",
@@ -3643,14 +3643,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags InstrumentsService
-     * @name InstrumentsServiceGetBondCoupons
+     * @name GetBondCoupons
      * @summary Метод получения графика выплат купонов по облигации.
      * @request POST:/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetBondCoupons
      * @secure
      * @response `200` `V1GetBondCouponsResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    instrumentsServiceGetBondCoupons: (data: V1GetBondCouponsRequest, params: RequestParams = {}) =>
+    GetBondCoupons: (data: V1GetBondCouponsRequest, params: RequestParams = {}) =>
       this.request<V1GetBondCouponsResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetBondCoupons`,
         method: "POST",
@@ -3665,14 +3665,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags InstrumentsService
-     * @name InstrumentsServiceGetBrandBy
+     * @name GetBrandBy
      * @summary Метод получения бренда по его идентификатору.
      * @request POST:/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetBrandBy
      * @secure
      * @response `200` `V1Brand` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    instrumentsServiceGetBrandBy: (data: V1GetBrandRequest, params: RequestParams = {}) =>
+    GetBrandBy: (data: V1GetBrandRequest, params: RequestParams = {}) =>
       this.request<V1Brand, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetBrandBy`,
         method: "POST",
@@ -3687,14 +3687,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags InstrumentsService
-     * @name InstrumentsServiceGetBrands
+     * @name GetBrands
      * @summary Метод получения списка брендов.
      * @request POST:/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetBrands
      * @secure
      * @response `200` `V1GetBrandsResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    instrumentsServiceGetBrands: (data: V1GetBrandsRequest, params: RequestParams = {}) =>
+    GetBrands: (data: V1GetBrandsRequest, params: RequestParams = {}) =>
       this.request<V1GetBrandsResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetBrands`,
         method: "POST",
@@ -3709,14 +3709,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags InstrumentsService
-     * @name InstrumentsServiceGetCountries
+     * @name GetCountries
      * @summary Метод получения списка стран.
      * @request POST:/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetCountries
      * @secure
      * @response `200` `V1GetCountriesResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    instrumentsServiceGetCountries: (data: V1GetCountriesRequest, params: RequestParams = {}) =>
+    GetCountries: (data: V1GetCountriesRequest, params: RequestParams = {}) =>
       this.request<V1GetCountriesResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetCountries`,
         method: "POST",
@@ -3731,14 +3731,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags InstrumentsService
-     * @name InstrumentsServiceGetDividends
+     * @name GetDividends
      * @summary Метод для получения событий выплаты дивидендов по инструменту.
      * @request POST:/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetDividends
      * @secure
      * @response `200` `V1GetDividendsResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    instrumentsServiceGetDividends: (data: V1GetDividendsRequest, params: RequestParams = {}) =>
+    GetDividends: (data: V1GetDividendsRequest, params: RequestParams = {}) =>
       this.request<V1GetDividendsResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetDividends`,
         method: "POST",
@@ -3753,14 +3753,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags InstrumentsService
-     * @name InstrumentsServiceGetFavorites
+     * @name GetFavorites
      * @summary Метод получения списка избранных инструментов.
      * @request POST:/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetFavorites
      * @secure
      * @response `200` `V1GetFavoritesResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    instrumentsServiceGetFavorites: (data: V1GetFavoritesRequest, params: RequestParams = {}) =>
+    GetFavorites: (data: V1GetFavoritesRequest, params: RequestParams = {}) =>
       this.request<V1GetFavoritesResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetFavorites`,
         method: "POST",
@@ -3775,14 +3775,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags InstrumentsService
-     * @name InstrumentsServiceGetFuturesMargin
+     * @name GetFuturesMargin
      * @summary Метод получения размера гарантийного обеспечения по фьючерсам.
      * @request POST:/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetFuturesMargin
      * @secure
      * @response `200` `V1GetFuturesMarginResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    instrumentsServiceGetFuturesMargin: (data: V1GetFuturesMarginRequest, params: RequestParams = {}) =>
+    GetFuturesMargin: (data: V1GetFuturesMarginRequest, params: RequestParams = {}) =>
       this.request<V1GetFuturesMarginResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetFuturesMargin`,
         method: "POST",
@@ -3797,14 +3797,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags InstrumentsService
-     * @name InstrumentsServiceGetInstrumentBy
+     * @name GetInstrumentBy
      * @summary Метод получения основной информации об инструменте.
      * @request POST:/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetInstrumentBy
      * @secure
      * @response `200` `V1InstrumentResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    instrumentsServiceGetInstrumentBy: (data: V1InstrumentRequest, params: RequestParams = {}) =>
+    GetInstrumentBy: (data: V1InstrumentRequest, params: RequestParams = {}) =>
       this.request<V1InstrumentResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.InstrumentsService/GetInstrumentBy`,
         method: "POST",
@@ -3819,14 +3819,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags InstrumentsService
-     * @name InstrumentsServiceOptionBy
+     * @name OptionBy
      * @summary Метод получения опциона по его идентификатору.
      * @request POST:/tinkoff.public.invest.api.contract.v1.InstrumentsService/OptionBy
      * @secure
      * @response `200` `V1OptionResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    instrumentsServiceOptionBy: (data: V1InstrumentRequest, params: RequestParams = {}) =>
+    OptionBy: (data: V1InstrumentRequest, params: RequestParams = {}) =>
       this.request<V1OptionResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.InstrumentsService/OptionBy`,
         method: "POST",
@@ -3841,14 +3841,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags InstrumentsService
-     * @name InstrumentsServiceOptions
+     * @name Options
      * @summary Deprecated Метод получения списка опционов.
      * @request POST:/tinkoff.public.invest.api.contract.v1.InstrumentsService/Options
      * @secure
      * @response `200` `V1OptionsResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    instrumentsServiceOptions: (data: V1InstrumentsRequest, params: RequestParams = {}) =>
+    Options: (data: V1InstrumentsRequest, params: RequestParams = {}) =>
       this.request<V1OptionsResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.InstrumentsService/Options`,
         method: "POST",
@@ -3863,14 +3863,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags InstrumentsService
-     * @name InstrumentsServiceOptionsBy
+     * @name OptionsBy
      * @summary Метод получения списка опционов.
      * @request POST:/tinkoff.public.invest.api.contract.v1.InstrumentsService/OptionsBy
      * @secure
      * @response `200` `V1OptionsResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    instrumentsServiceOptionsBy: (data: V1FilterOptionsRequest, params: RequestParams = {}) =>
+    OptionsBy: (data: V1FilterOptionsRequest, params: RequestParams = {}) =>
       this.request<V1OptionsResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.InstrumentsService/OptionsBy`,
         method: "POST",
@@ -3885,14 +3885,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags InstrumentsService
-     * @name InstrumentsServiceShareBy
+     * @name ShareBy
      * @summary Метод получения акции по её идентификатору.
      * @request POST:/tinkoff.public.invest.api.contract.v1.InstrumentsService/ShareBy
      * @secure
      * @response `200` `V1ShareResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    instrumentsServiceShareBy: (data: V1InstrumentRequest, params: RequestParams = {}) =>
+    ShareBy: (data: V1InstrumentRequest, params: RequestParams = {}) =>
       this.request<V1ShareResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.InstrumentsService/ShareBy`,
         method: "POST",
@@ -3907,14 +3907,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags InstrumentsService
-     * @name InstrumentsServiceShares
+     * @name Shares
      * @summary Метод получения списка акций.
      * @request POST:/tinkoff.public.invest.api.contract.v1.InstrumentsService/Shares
      * @secure
      * @response `200` `V1SharesResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    instrumentsServiceShares: (data: V1InstrumentsRequest, params: RequestParams = {}) =>
+    Shares: (data: V1InstrumentsRequest, params: RequestParams = {}) =>
       this.request<V1SharesResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.InstrumentsService/Shares`,
         method: "POST",
@@ -3929,14 +3929,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags InstrumentsService
-     * @name InstrumentsServiceTradingSchedules
+     * @name TradingSchedules
      * @summary Метод получения расписания торгов торговых площадок.
      * @request POST:/tinkoff.public.invest.api.contract.v1.InstrumentsService/TradingSchedules
      * @secure
      * @response `200` `V1TradingSchedulesResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    instrumentsServiceTradingSchedules: (data: V1TradingSchedulesRequest, params: RequestParams = {}) =>
+    TradingSchedules: (data: V1TradingSchedulesRequest, params: RequestParams = {}) =>
       this.request<V1TradingSchedulesResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.InstrumentsService/TradingSchedules`,
         method: "POST",
@@ -3952,14 +3952,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags MarketDataService
-     * @name MarketDataServiceGetCandles
+     * @name GetCandles
      * @summary Метод запроса исторических свечей по инструменту.
      * @request POST:/tinkoff.public.invest.api.contract.v1.MarketDataService/GetCandles
      * @secure
      * @response `200` `V1GetCandlesResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    marketDataServiceGetCandles: (data: V1GetCandlesRequest, params: RequestParams = {}) =>
+    GetCandles: (data: V1GetCandlesRequest, params: RequestParams = {}) =>
       this.request<V1GetCandlesResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.MarketDataService/GetCandles`,
         method: "POST",
@@ -3974,14 +3974,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags MarketDataService
-     * @name MarketDataServiceGetClosePrices
+     * @name GetClosePrices
      * @summary Метод запроса цен закрытия торговой сессии по инструментам.
      * @request POST:/tinkoff.public.invest.api.contract.v1.MarketDataService/GetClosePrices
      * @secure
      * @response `200` `V1GetClosePricesResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    marketDataServiceGetClosePrices: (data: V1GetClosePricesRequest, params: RequestParams = {}) =>
+    GetClosePrices: (data: V1GetClosePricesRequest, params: RequestParams = {}) =>
       this.request<V1GetClosePricesResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.MarketDataService/GetClosePrices`,
         method: "POST",
@@ -3996,14 +3996,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags MarketDataService
-     * @name MarketDataServiceGetLastPrices
+     * @name GetLastPrices
      * @summary Метод запроса цен последних сделок по инструментам.
      * @request POST:/tinkoff.public.invest.api.contract.v1.MarketDataService/GetLastPrices
      * @secure
      * @response `200` `V1GetLastPricesResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    marketDataServiceGetLastPrices: (data: V1GetLastPricesRequest, params: RequestParams = {}) =>
+    GetLastPrices: (data: V1GetLastPricesRequest, params: RequestParams = {}) =>
       this.request<V1GetLastPricesResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.MarketDataService/GetLastPrices`,
         method: "POST",
@@ -4018,14 +4018,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags MarketDataService
-     * @name MarketDataServiceGetLastTrades
+     * @name GetLastTrades
      * @summary Метод запроса обезличенных сделок за последний час.
      * @request POST:/tinkoff.public.invest.api.contract.v1.MarketDataService/GetLastTrades
      * @secure
      * @response `200` `V1GetLastTradesResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    marketDataServiceGetLastTrades: (data: V1GetLastTradesRequest, params: RequestParams = {}) =>
+    GetLastTrades: (data: V1GetLastTradesRequest, params: RequestParams = {}) =>
       this.request<V1GetLastTradesResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.MarketDataService/GetLastTrades`,
         method: "POST",
@@ -4040,14 +4040,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags MarketDataService
-     * @name MarketDataServiceGetOrderBook
+     * @name GetOrderBook
      * @summary Метод получения стакана по инструменту.
      * @request POST:/tinkoff.public.invest.api.contract.v1.MarketDataService/GetOrderBook
      * @secure
      * @response `200` `V1GetOrderBookResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    marketDataServiceGetOrderBook: (data: V1GetOrderBookRequest, params: RequestParams = {}) =>
+    GetOrderBook: (data: V1GetOrderBookRequest, params: RequestParams = {}) =>
       this.request<V1GetOrderBookResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.MarketDataService/GetOrderBook`,
         method: "POST",
@@ -4062,14 +4062,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags MarketDataService
-     * @name MarketDataServiceGetTradingStatus
+     * @name GetTradingStatus
      * @summary Метод запроса статуса торгов по инструментам.
      * @request POST:/tinkoff.public.invest.api.contract.v1.MarketDataService/GetTradingStatus
      * @secure
      * @response `200` `V1GetTradingStatusResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    marketDataServiceGetTradingStatus: (data: V1GetTradingStatusRequest, params: RequestParams = {}) =>
+    GetTradingStatus: (data: V1GetTradingStatusRequest, params: RequestParams = {}) =>
       this.request<V1GetTradingStatusResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.MarketDataService/GetTradingStatus`,
         method: "POST",
@@ -4084,14 +4084,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags MarketDataService
-     * @name MarketDataServiceGetTradingStatuses
+     * @name GetTradingStatuses
      * @summary Метод запроса статуса торгов по инструментам.
      * @request POST:/tinkoff.public.invest.api.contract.v1.MarketDataService/GetTradingStatuses
      * @secure
      * @response `200` `V1GetTradingStatusesResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    marketDataServiceGetTradingStatuses: (data: V1GetTradingStatusesRequest, params: RequestParams = {}) =>
+    GetTradingStatuses: (data: V1GetTradingStatusesRequest, params: RequestParams = {}) =>
       this.request<V1GetTradingStatusesResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.MarketDataService/GetTradingStatuses`,
         method: "POST",
@@ -4107,14 +4107,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags MarketDataStreamService
-     * @name MarketDataStreamServiceMarketDataServerSideStream
+     * @name MarketDataServerSideStream
      * @summary Server-side стрим предоставления биржевой информации.
      * @request POST:/tinkoff.public.invest.api.contract.v1.MarketDataStreamService/MarketDataServerSideStream
      * @secure
      * @response `200` `StreamResultOfV1MarketDataResponse` A successful response.(streaming responses)
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    marketDataStreamServiceMarketDataServerSideStream: (
+    MarketDataServerSideStream: (
       data: V1MarketDataServerSideStreamRequest,
       params: RequestParams = {},
     ) =>
@@ -4132,14 +4132,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags MarketDataStreamService
-     * @name MarketDataStreamServiceMarketDataStream
+     * @name MarketDataStream
      * @summary Bi-directional стрим предоставления биржевой информации.
      * @request POST:/tinkoff.public.invest.api.contract.v1.MarketDataStreamService/MarketDataStream
      * @secure
      * @response `200` `StreamResultOfV1MarketDataResponse` A successful response.(streaming responses)
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    marketDataStreamServiceMarketDataStream: (data: V1MarketDataRequest, params: RequestParams = {}) =>
+    MarketDataStream: (data: V1MarketDataRequest, params: RequestParams = {}) =>
       this.request<StreamResultOfV1MarketDataResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.MarketDataStreamService/MarketDataStream`,
         method: "POST",
@@ -4155,14 +4155,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags OperationsService
-     * @name OperationsServiceGetBrokerReport
+     * @name GetBrokerReport
      * @summary Метод получения брокерского отчёта.
      * @request POST:/tinkoff.public.invest.api.contract.v1.OperationsService/GetBrokerReport
      * @secure
      * @response `200` `V1BrokerReportResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    operationsServiceGetBrokerReport: (data: V1BrokerReportRequest, params: RequestParams = {}) =>
+    GetBrokerReport: (data: V1BrokerReportRequest, params: RequestParams = {}) =>
       this.request<V1BrokerReportResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.OperationsService/GetBrokerReport`,
         method: "POST",
@@ -4177,14 +4177,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags OperationsService
-     * @name OperationsServiceGetDividendsForeignIssuer
+     * @name GetDividendsForeignIssuer
      * @summary Метод получения отчёта "Справка о доходах за пределами РФ".
      * @request POST:/tinkoff.public.invest.api.contract.v1.OperationsService/GetDividendsForeignIssuer
      * @secure
      * @response `200` `V1GetDividendsForeignIssuerResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    operationsServiceGetDividendsForeignIssuer: (
+    GetDividendsForeignIssuer: (
       data: V1GetDividendsForeignIssuerRequest,
       params: RequestParams = {},
     ) =>
@@ -4202,7 +4202,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
  * No description
  *
  * @tags OperationsService
- * @name OperationsServiceGetOperations
+ * @name GetOperations
  * @summary Метод получения списка операций по счёту.При работе с данным методом необходимо учитывать
 [особенности взаимодействия](/investAPI/operations_problems) с данным методом.
  * @request POST:/tinkoff.public.invest.api.contract.v1.OperationsService/GetOperations
@@ -4210,7 +4210,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
  * @response `200` `V1OperationsResponse` A successful response.
  * @response `default` `RpcStatus` An unexpected error response.
  */
-    operationsServiceGetOperations: (data: V1OperationsRequest, params: RequestParams = {}) =>
+    GetOperations: (data: V1OperationsRequest, params: RequestParams = {}) =>
       this.request<V1OperationsResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.OperationsService/GetOperations`,
         method: "POST",
@@ -4225,7 +4225,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
  * No description
  *
  * @tags OperationsService
- * @name OperationsServiceGetOperationsByCursor
+ * @name GetOperationsByCursor
  * @summary Метод получения списка операций по счёту с пагинацией. При работе с данным методом необходимо учитывать
 [особенности взаимодействия](/investAPI/operations_problems) с данным методом.
  * @request POST:/tinkoff.public.invest.api.contract.v1.OperationsService/GetOperationsByCursor
@@ -4233,7 +4233,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
  * @response `200` `V1GetOperationsByCursorResponse` A successful response.
  * @response `default` `RpcStatus` An unexpected error response.
  */
-    operationsServiceGetOperationsByCursor: (data: V1GetOperationsByCursorRequest, params: RequestParams = {}) =>
+    GetOperationsByCursor: (data: V1GetOperationsByCursorRequest, params: RequestParams = {}) =>
       this.request<V1GetOperationsByCursorResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.OperationsService/GetOperationsByCursor`,
         method: "POST",
@@ -4248,14 +4248,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags OperationsService
-     * @name OperationsServiceGetPortfolio
+     * @name GetPortfolio
      * @summary Метод получения портфеля по счёту.
      * @request POST:/tinkoff.public.invest.api.contract.v1.OperationsService/GetPortfolio
      * @secure
      * @response `200` `V1PortfolioResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    operationsServiceGetPortfolio: (data: V1PortfolioRequest, params: RequestParams = {}) =>
+    GetPortfolio: (data: V1PortfolioRequest, params: RequestParams = {}) =>
       this.request<V1PortfolioResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.OperationsService/GetPortfolio`,
         method: "POST",
@@ -4270,14 +4270,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags OperationsService
-     * @name OperationsServiceGetPositions
+     * @name GetPositions
      * @summary Метод получения списка позиций по счёту.
      * @request POST:/tinkoff.public.invest.api.contract.v1.OperationsService/GetPositions
      * @secure
      * @response `200` `V1PositionsResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    operationsServiceGetPositions: (data: V1PositionsRequest, params: RequestParams = {}) =>
+    GetPositions: (data: V1PositionsRequest, params: RequestParams = {}) =>
       this.request<V1PositionsResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.OperationsService/GetPositions`,
         method: "POST",
@@ -4292,14 +4292,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags OperationsService
-     * @name OperationsServiceGetWithdrawLimits
+     * @name GetWithdrawLimits
      * @summary Метод получения доступного остатка для вывода средств.
      * @request POST:/tinkoff.public.invest.api.contract.v1.OperationsService/GetWithdrawLimits
      * @secure
      * @response `200` `V1WithdrawLimitsResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    operationsServiceGetWithdrawLimits: (data: V1WithdrawLimitsRequest, params: RequestParams = {}) =>
+    GetWithdrawLimits: (data: V1WithdrawLimitsRequest, params: RequestParams = {}) =>
       this.request<V1WithdrawLimitsResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.OperationsService/GetWithdrawLimits`,
         method: "POST",
@@ -4315,14 +4315,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags OperationsStreamService
-     * @name OperationsStreamServicePortfolioStream
+     * @name PortfolioStream
      * @summary Server-side stream обновлений портфеля
      * @request POST:/tinkoff.public.invest.api.contract.v1.OperationsStreamService/PortfolioStream
      * @secure
      * @response `200` `StreamResultOfV1PortfolioStreamResponse` A successful response.(streaming responses)
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    operationsStreamServicePortfolioStream: (data: V1PortfolioStreamRequest, params: RequestParams = {}) =>
+    PortfolioStream: (data: V1PortfolioStreamRequest, params: RequestParams = {}) =>
       this.request<StreamResultOfV1PortfolioStreamResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.OperationsStreamService/PortfolioStream`,
         method: "POST",
@@ -4337,14 +4337,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags OperationsStreamService
-     * @name OperationsStreamServicePositionsStream
+     * @name PositionsStream
      * @summary Server-side stream обновлений информации по изменению позиций портфеля
      * @request POST:/tinkoff.public.invest.api.contract.v1.OperationsStreamService/PositionsStream
      * @secure
      * @response `200` `StreamResultOfV1PositionsStreamResponse` A successful response.(streaming responses)
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    operationsStreamServicePositionsStream: (data: V1PositionsStreamRequest, params: RequestParams = {}) =>
+    PositionsStream: (data: V1PositionsStreamRequest, params: RequestParams = {}) =>
       this.request<StreamResultOfV1PositionsStreamResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.OperationsStreamService/PositionsStream`,
         method: "POST",
@@ -4360,14 +4360,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags OrdersService
-     * @name OrdersServiceCancelOrder
+     * @name CancelOrder
      * @summary Метод отмены биржевой заявки.
      * @request POST:/tinkoff.public.invest.api.contract.v1.OrdersService/CancelOrder
      * @secure
      * @response `200` `V1CancelOrderResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    ordersServiceCancelOrder: (data: V1CancelOrderRequest, params: RequestParams = {}) =>
+    CancelOrder: (data: V1CancelOrderRequest, params: RequestParams = {}) =>
       this.request<V1CancelOrderResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.OrdersService/CancelOrder`,
         method: "POST",
@@ -4382,14 +4382,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags OrdersService
-     * @name OrdersServiceGetOrderState
+     * @name GetOrderState
      * @summary Метод получения статуса торгового поручения.
      * @request POST:/tinkoff.public.invest.api.contract.v1.OrdersService/GetOrderState
      * @secure
      * @response `200` `V1OrderState` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    ordersServiceGetOrderState: (data: V1GetOrderStateRequest, params: RequestParams = {}) =>
+    GetOrderState: (data: V1GetOrderStateRequest, params: RequestParams = {}) =>
       this.request<V1OrderState, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.OrdersService/GetOrderState`,
         method: "POST",
@@ -4404,14 +4404,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags OrdersService
-     * @name OrdersServiceGetOrders
+     * @name GetOrders
      * @summary Метод получения списка активных заявок по счёту.
      * @request POST:/tinkoff.public.invest.api.contract.v1.OrdersService/GetOrders
      * @secure
      * @response `200` `V1GetOrdersResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    ordersServiceGetOrders: (data: V1GetOrdersRequest, params: RequestParams = {}) =>
+    GetOrders: (data: V1GetOrdersRequest, params: RequestParams = {}) =>
       this.request<V1GetOrdersResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.OrdersService/GetOrders`,
         method: "POST",
@@ -4426,14 +4426,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags OrdersService
-     * @name OrdersServicePostOrder
+     * @name PostOrder
      * @summary Метод выставления заявки.
      * @request POST:/tinkoff.public.invest.api.contract.v1.OrdersService/PostOrder
      * @secure
      * @response `200` `V1PostOrderResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    ordersServicePostOrder: (data: V1PostOrderRequest, params: RequestParams = {}) =>
+    PostOrder: (data: V1PostOrderRequest, params: RequestParams = {}) =>
       this.request<V1PostOrderResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.OrdersService/PostOrder`,
         method: "POST",
@@ -4448,14 +4448,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags OrdersService
-     * @name OrdersServiceReplaceOrder
+     * @name ReplaceOrder
      * @summary Метод изменения выставленной заявки.
      * @request POST:/tinkoff.public.invest.api.contract.v1.OrdersService/ReplaceOrder
      * @secure
      * @response `200` `V1PostOrderResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    ordersServiceReplaceOrder: (data: V1ReplaceOrderRequest, params: RequestParams = {}) =>
+    ReplaceOrder: (data: V1ReplaceOrderRequest, params: RequestParams = {}) =>
       this.request<V1PostOrderResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.OrdersService/ReplaceOrder`,
         method: "POST",
@@ -4471,14 +4471,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags OrdersStreamService
-     * @name OrdersStreamServiceTradesStream
+     * @name TradesStream
      * @summary Stream сделок пользователя
      * @request POST:/tinkoff.public.invest.api.contract.v1.OrdersStreamService/TradesStream
      * @secure
      * @response `200` `StreamResultOfV1TradesStreamResponse` A successful response.(streaming responses)
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    ordersStreamServiceTradesStream: (data: V1TradesStreamRequest, params: RequestParams = {}) =>
+    TradesStream: (data: V1TradesStreamRequest, params: RequestParams = {}) =>
       this.request<StreamResultOfV1TradesStreamResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.OrdersStreamService/TradesStream`,
         method: "POST",
@@ -4494,14 +4494,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags SandboxService
-     * @name SandboxServiceCancelSandboxOrder
+     * @name CancelSandboxOrder
      * @summary Метод отмены торгового поручения в песочнице.
      * @request POST:/tinkoff.public.invest.api.contract.v1.SandboxService/CancelSandboxOrder
      * @secure
      * @response `200` `V1CancelOrderResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    sandboxServiceCancelSandboxOrder: (data: V1CancelOrderRequest, params: RequestParams = {}) =>
+    CancelSandboxOrder: (data: V1CancelOrderRequest, params: RequestParams = {}) =>
       this.request<V1CancelOrderResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.SandboxService/CancelSandboxOrder`,
         method: "POST",
@@ -4516,14 +4516,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags SandboxService
-     * @name SandboxServiceCloseSandboxAccount
+     * @name CloseSandboxAccount
      * @summary Метод закрытия счёта в песочнице.
      * @request POST:/tinkoff.public.invest.api.contract.v1.SandboxService/CloseSandboxAccount
      * @secure
      * @response `200` `V1CloseSandboxAccountResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    sandboxServiceCloseSandboxAccount: (data: V1CloseSandboxAccountRequest, params: RequestParams = {}) =>
+    CloseSandboxAccount: (data: V1CloseSandboxAccountRequest, params: RequestParams = {}) =>
       this.request<V1CloseSandboxAccountResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.SandboxService/CloseSandboxAccount`,
         method: "POST",
@@ -4538,14 +4538,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags SandboxService
-     * @name SandboxServiceGetSandboxAccounts
+     * @name GetSandboxAccounts
      * @summary Метод получения счетов в песочнице.
      * @request POST:/tinkoff.public.invest.api.contract.v1.SandboxService/GetSandboxAccounts
      * @secure
      * @response `200` `V1GetAccountsResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    sandboxServiceGetSandboxAccounts: (data: V1GetAccountsRequest, params: RequestParams = {}) =>
+    GetSandboxAccounts: (data: V1GetAccountsRequest, params: RequestParams = {}) =>
       this.request<V1GetAccountsResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.SandboxService/GetSandboxAccounts`,
         method: "POST",
@@ -4560,14 +4560,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags SandboxService
-     * @name SandboxServiceGetSandboxOperations
+     * @name GetSandboxOperations
      * @summary Метод получения операций в песочнице по номеру счёта.
      * @request POST:/tinkoff.public.invest.api.contract.v1.SandboxService/GetSandboxOperations
      * @secure
      * @response `200` `V1OperationsResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    sandboxServiceGetSandboxOperations: (data: V1OperationsRequest, params: RequestParams = {}) =>
+    GetSandboxOperations: (data: V1OperationsRequest, params: RequestParams = {}) =>
       this.request<V1OperationsResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.SandboxService/GetSandboxOperations`,
         method: "POST",
@@ -4582,14 +4582,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags SandboxService
-     * @name SandboxServiceGetSandboxOperationsByCursor
+     * @name GetSandboxOperationsByCursor
      * @summary Метод получения операций в песочнице по номеру счета с пагинацией.
      * @request POST:/tinkoff.public.invest.api.contract.v1.SandboxService/GetSandboxOperationsByCursor
      * @secure
      * @response `200` `V1GetOperationsByCursorResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    sandboxServiceGetSandboxOperationsByCursor: (data: V1GetOperationsByCursorRequest, params: RequestParams = {}) =>
+    GetSandboxOperationsByCursor: (data: V1GetOperationsByCursorRequest, params: RequestParams = {}) =>
       this.request<V1GetOperationsByCursorResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.SandboxService/GetSandboxOperationsByCursor`,
         method: "POST",
@@ -4604,14 +4604,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags SandboxService
-     * @name SandboxServiceGetSandboxOrderState
+     * @name GetSandboxOrderState
      * @summary Метод получения статуса заявки в песочнице.
      * @request POST:/tinkoff.public.invest.api.contract.v1.SandboxService/GetSandboxOrderState
      * @secure
      * @response `200` `V1OrderState` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    sandboxServiceGetSandboxOrderState: (data: V1GetOrderStateRequest, params: RequestParams = {}) =>
+    GetSandboxOrderState: (data: V1GetOrderStateRequest, params: RequestParams = {}) =>
       this.request<V1OrderState, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.SandboxService/GetSandboxOrderState`,
         method: "POST",
@@ -4626,14 +4626,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags SandboxService
-     * @name SandboxServiceGetSandboxOrders
+     * @name GetSandboxOrders
      * @summary Метод получения списка активных заявок по счёту в песочнице.
      * @request POST:/tinkoff.public.invest.api.contract.v1.SandboxService/GetSandboxOrders
      * @secure
      * @response `200` `V1GetOrdersResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    sandboxServiceGetSandboxOrders: (data: V1GetOrdersRequest, params: RequestParams = {}) =>
+    GetSandboxOrders: (data: V1GetOrdersRequest, params: RequestParams = {}) =>
       this.request<V1GetOrdersResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.SandboxService/GetSandboxOrders`,
         method: "POST",
@@ -4648,14 +4648,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags SandboxService
-     * @name SandboxServiceGetSandboxPortfolio
+     * @name GetSandboxPortfolio
      * @summary Метод получения портфолио в песочнице.
      * @request POST:/tinkoff.public.invest.api.contract.v1.SandboxService/GetSandboxPortfolio
      * @secure
      * @response `200` `V1PortfolioResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    sandboxServiceGetSandboxPortfolio: (data: V1PortfolioRequest, params: RequestParams = {}) =>
+    GetSandboxPortfolio: (data: V1PortfolioRequest, params: RequestParams = {}) =>
       this.request<V1PortfolioResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.SandboxService/GetSandboxPortfolio`,
         method: "POST",
@@ -4670,14 +4670,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags SandboxService
-     * @name SandboxServiceGetSandboxPositions
+     * @name GetSandboxPositions
      * @summary Метод получения позиций по виртуальному счёту песочницы.
      * @request POST:/tinkoff.public.invest.api.contract.v1.SandboxService/GetSandboxPositions
      * @secure
      * @response `200` `V1PositionsResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    sandboxServiceGetSandboxPositions: (data: V1PositionsRequest, params: RequestParams = {}) =>
+    GetSandboxPositions: (data: V1PositionsRequest, params: RequestParams = {}) =>
       this.request<V1PositionsResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.SandboxService/GetSandboxPositions`,
         method: "POST",
@@ -4692,14 +4692,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags SandboxService
-     * @name SandboxServiceGetSandboxWithdrawLimits
+     * @name GetSandboxWithdrawLimits
      * @summary Метод получения доступного остатка для вывода средств в песочнице.
      * @request POST:/tinkoff.public.invest.api.contract.v1.SandboxService/GetSandboxWithdrawLimits
      * @secure
      * @response `200` `V1WithdrawLimitsResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    sandboxServiceGetSandboxWithdrawLimits: (data: V1WithdrawLimitsRequest, params: RequestParams = {}) =>
+    GetSandboxWithdrawLimits: (data: V1WithdrawLimitsRequest, params: RequestParams = {}) =>
       this.request<V1WithdrawLimitsResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.SandboxService/GetSandboxWithdrawLimits`,
         method: "POST",
@@ -4714,14 +4714,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags SandboxService
-     * @name SandboxServiceOpenSandboxAccount
+     * @name OpenSandboxAccount
      * @summary Метод регистрации счёта в песочнице.
      * @request POST:/tinkoff.public.invest.api.contract.v1.SandboxService/OpenSandboxAccount
      * @secure
      * @response `200` `V1OpenSandboxAccountResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    sandboxServiceOpenSandboxAccount: (data: V1OpenSandboxAccountRequest, params: RequestParams = {}) =>
+    OpenSandboxAccount: (data: V1OpenSandboxAccountRequest, params: RequestParams = {}) =>
       this.request<V1OpenSandboxAccountResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.SandboxService/OpenSandboxAccount`,
         method: "POST",
@@ -4736,14 +4736,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags SandboxService
-     * @name SandboxServicePostSandboxOrder
+     * @name PostSandboxOrder
      * @summary Метод выставления торгового поручения в песочнице.
      * @request POST:/tinkoff.public.invest.api.contract.v1.SandboxService/PostSandboxOrder
      * @secure
      * @response `200` `V1PostOrderResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    sandboxServicePostSandboxOrder: (data: V1PostOrderRequest, params: RequestParams = {}) =>
+    PostSandboxOrder: (data: V1PostOrderRequest, params: RequestParams = {}) =>
       this.request<V1PostOrderResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.SandboxService/PostSandboxOrder`,
         method: "POST",
@@ -4758,14 +4758,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags SandboxService
-     * @name SandboxServiceReplaceSandboxOrder
+     * @name ReplaceSandboxOrder
      * @summary Метод изменения выставленной заявки.
      * @request POST:/tinkoff.public.invest.api.contract.v1.SandboxService/ReplaceSandboxOrder
      * @secure
      * @response `200` `V1PostOrderResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    sandboxServiceReplaceSandboxOrder: (data: V1ReplaceOrderRequest, params: RequestParams = {}) =>
+    ReplaceSandboxOrder: (data: V1ReplaceOrderRequest, params: RequestParams = {}) =>
       this.request<V1PostOrderResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.SandboxService/ReplaceSandboxOrder`,
         method: "POST",
@@ -4780,14 +4780,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags SandboxService
-     * @name SandboxServiceSandboxPayIn
+     * @name SandboxPayIn
      * @summary Метод пополнения счёта в песочнице.
      * @request POST:/tinkoff.public.invest.api.contract.v1.SandboxService/SandboxPayIn
      * @secure
      * @response `200` `V1SandboxPayInResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    sandboxServiceSandboxPayIn: (data: V1SandboxPayInRequest, params: RequestParams = {}) =>
+    SandboxPayIn: (data: V1SandboxPayInRequest, params: RequestParams = {}) =>
       this.request<V1SandboxPayInResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.SandboxService/SandboxPayIn`,
         method: "POST",
@@ -4803,14 +4803,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags StopOrdersService
-     * @name StopOrdersServiceCancelStopOrder
+     * @name CancelStopOrder
      * @summary Метод отмены стоп-заявки.
      * @request POST:/tinkoff.public.invest.api.contract.v1.StopOrdersService/CancelStopOrder
      * @secure
      * @response `200` `V1CancelStopOrderResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    stopOrdersServiceCancelStopOrder: (data: V1CancelStopOrderRequest, params: RequestParams = {}) =>
+    CancelStopOrder: (data: V1CancelStopOrderRequest, params: RequestParams = {}) =>
       this.request<V1CancelStopOrderResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.StopOrdersService/CancelStopOrder`,
         method: "POST",
@@ -4825,14 +4825,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags StopOrdersService
-     * @name StopOrdersServiceGetStopOrders
+     * @name GetStopOrders
      * @summary Метод получения списка активных стоп заявок по счёту.
      * @request POST:/tinkoff.public.invest.api.contract.v1.StopOrdersService/GetStopOrders
      * @secure
      * @response `200` `V1GetStopOrdersResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    stopOrdersServiceGetStopOrders: (data: V1GetStopOrdersRequest, params: RequestParams = {}) =>
+    GetStopOrders: (data: V1GetStopOrdersRequest, params: RequestParams = {}) =>
       this.request<V1GetStopOrdersResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.StopOrdersService/GetStopOrders`,
         method: "POST",
@@ -4847,14 +4847,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags StopOrdersService
-     * @name StopOrdersServicePostStopOrder
+     * @name PostStopOrder
      * @summary Метод выставления стоп-заявки.
      * @request POST:/tinkoff.public.invest.api.contract.v1.StopOrdersService/PostStopOrder
      * @secure
      * @response `200` `V1PostStopOrderResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    stopOrdersServicePostStopOrder: (data: V1PostStopOrderRequest, params: RequestParams = {}) =>
+    PostStopOrder: (data: V1PostStopOrderRequest, params: RequestParams = {}) =>
       this.request<V1PostStopOrderResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.StopOrdersService/PostStopOrder`,
         method: "POST",
@@ -4870,14 +4870,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags UsersService
-     * @name UsersServiceGetAccounts
+     * @name GetAccounts
      * @summary Метод получения счетов пользователя.
      * @request POST:/tinkoff.public.invest.api.contract.v1.UsersService/GetAccounts
      * @secure
      * @response `200` `V1GetAccountsResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    usersServiceGetAccounts: (data: V1GetAccountsRequest, params: RequestParams = {}) =>
+    GetAccounts: (data: V1GetAccountsRequest, params: RequestParams = {}) =>
       this.request<V1GetAccountsResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.UsersService/GetAccounts`,
         method: "POST",
@@ -4892,14 +4892,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags UsersService
-     * @name UsersServiceGetInfo
+     * @name GetInfo
      * @summary Метод получения информации о пользователе.
      * @request POST:/tinkoff.public.invest.api.contract.v1.UsersService/GetInfo
      * @secure
      * @response `200` `V1GetInfoResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    usersServiceGetInfo: (data: V1GetInfoRequest, params: RequestParams = {}) =>
+    GetInfo: (data: V1GetInfoRequest, params: RequestParams = {}) =>
       this.request<V1GetInfoResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.UsersService/GetInfo`,
         method: "POST",
@@ -4914,14 +4914,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags UsersService
-     * @name UsersServiceGetMarginAttributes
+     * @name GetMarginAttributes
      * @summary Расчёт маржинальных показателей по счёту.
      * @request POST:/tinkoff.public.invest.api.contract.v1.UsersService/GetMarginAttributes
      * @secure
      * @response `200` `V1GetMarginAttributesResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    usersServiceGetMarginAttributes: (data: V1GetMarginAttributesRequest, params: RequestParams = {}) =>
+    GetMarginAttributes: (data: V1GetMarginAttributesRequest, params: RequestParams = {}) =>
       this.request<V1GetMarginAttributesResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.UsersService/GetMarginAttributes`,
         method: "POST",
@@ -4936,14 +4936,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * No description
      *
      * @tags UsersService
-     * @name UsersServiceGetUserTariff
+     * @name GetUserTariff
      * @summary Запрос тарифа пользователя.
      * @request POST:/tinkoff.public.invest.api.contract.v1.UsersService/GetUserTariff
      * @secure
      * @response `200` `V1GetUserTariffResponse` A successful response.
      * @response `default` `RpcStatus` An unexpected error response.
      */
-    usersServiceGetUserTariff: (data: V1GetUserTariffRequest, params: RequestParams = {}) =>
+    GetUserTariff: (data: V1GetUserTariffRequest, params: RequestParams = {}) =>
       this.request<V1GetUserTariffResponse, RpcStatus>({
         path: `/tinkoff.public.invest.api.contract.v1.UsersService/GetUserTariff`,
         method: "POST",
