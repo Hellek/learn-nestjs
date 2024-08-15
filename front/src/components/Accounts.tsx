@@ -1,24 +1,27 @@
 import { useRecoilState, useRecoilValue } from 'recoil'
 
 import {
-  currentAccountIdState,
+  currentAccountState,
   openedAccountsState,
 } from '@models/accounts'
 
 export const Accounts = () => {
-  const [currentAccountId, setCurrentAccountId] = useRecoilState(currentAccountIdState)
+  const [currentAccount, setCurrentAccount] = useRecoilState(currentAccountState)
   const openedAccounts = useRecoilValue(openedAccountsState)
 
   return (
     <div>
       <select
-        value={currentAccountId}
+        value={currentAccount ? currentAccount.id : undefined}
         aria-label="accounts"
         className="w-60"
-        onChange={event => setCurrentAccountId(event.target.value)}
+        onChange={event => {
+          const selectedAccount = openedAccounts.find(({ id }) => id === event.target.value)
+          if (selectedAccount) setCurrentAccount(selectedAccount)
+        }}
       >
         {openedAccounts.map(a => (
-          <option key={a.id}>
+          <option key={a.id} value={a.id}>
             {a.name}
           </option>
         ))}

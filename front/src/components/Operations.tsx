@@ -1,14 +1,14 @@
 import { useRecoilValue } from 'recoil'
 
-import { api } from '@app/api'
+import { api, V1Account } from '@app/api'
 import {
   Account,
-  currentAccountIdState,
+  currentAccountState,
   oldestAccountState,
 } from '@models/accounts'
 
 type BaseRequest = {
-  accountId: string
+  account: V1Account
 }
 
 type FirstRequest = BaseRequest & {
@@ -29,8 +29,8 @@ function download(content: string, fileName: string, contentType: string) {
   a.click()
 }
 
-const getOperations = async ({
-  accountId,
+const getAllOperations = async ({
+  account,
   oldestAccount,
   cursor,
 }: FirstRequest | CursorRequest) => {
@@ -48,13 +48,17 @@ const getOperations = async ({
   const from = oldestAccountOpenedDate
   const to = nextFullYearISO
 
+  if (!account.id) {
+    throw Error('Отсутствует account id')
+  }
+
   let request: {
     accountId: string
     from?: string
     to?: string
     cursor?: string
   } = {
-    accountId,
+    accountId: account.id,
     from,
     to,
   }
@@ -75,7 +79,7 @@ const getOperations = async ({
     }
 
     request = {
-      accountId,
+      accountId: account.id,
       cursor: nextCursor,
     }
 
@@ -85,7 +89,7 @@ const getOperations = async ({
 
     hasMoreItems = !!hasNext
 
-    download(JSON.stringify(items, null, 2), `operations-${pageNumber}.json`, 'application/json')
+    download(JSON.stringify(items, null, 2), `ops-${account.name}-${pageNumber}.json`, 'application/json')
     pageNumber += 1
   }
 
@@ -93,15 +97,17 @@ const getOperations = async ({
 }
 
 export const Operations = () => {
-  const currentAccountId = useRecoilValue(currentAccountIdState)
+  const currentAccount = useRecoilValue(currentAccountState)
   const oldestAccount = useRecoilValue(oldestAccountState)
 
   return (
     <div>
       <button
         type="button"
+        disabled={!currentAccount}
         onClick={() => {
-          getOperations({ accountId: currentAccountId, oldestAccount })
+          if (!currentAccount) return
+          getAllOperations({ account: currentAccount, oldestAccount })
         }}
       >
         Выгрузить операции

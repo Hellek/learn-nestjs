@@ -14,9 +14,9 @@ export const accountsState = atom<Accounts>({
   default: [],
 })
 
-export const currentAccountIdState = atom<string>({
-  key: 'currentAccountIdState',
-  default: '',
+export const currentAccountState = atom<V1Account | null>({
+  key: 'currentAccountState',
+  default: null,
 })
 
 export const openedAccountsState = selector({
