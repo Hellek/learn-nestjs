@@ -1,6 +1,9 @@
 import { atom, selector } from 'recoil'
+import { recoilPersist } from 'recoil-persist'
 
 import { api, V1Account } from '@app/api'
+
+const { persistAtom } = recoilPersist()
 
 export type Accounts = V1Account[]
 export type Account = V1Account
@@ -17,6 +20,7 @@ export const accountsState = atom<Accounts>({
 export const currentAccountState = atom<V1Account | null>({
   key: 'currentAccountState',
   default: null,
+  effects_UNSTABLE: [persistAtom],
 })
 
 export const openedAccountsState = selector({

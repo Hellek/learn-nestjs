@@ -5,16 +5,16 @@ import { accountsState, currentAccountState, fetchAccounts } from '@models/accou
 
 export const useGetInitials = () => {
   const [accounts, setAccounts] = useRecoilState(accountsState)
-  const [, setCurrentAccount] = useRecoilState(currentAccountState)
+  const [currentAccount, setCurrentAccount] = useRecoilState(currentAccountState)
 
   useEffect(() => {
     fetchAccounts.then(accs => {
       if (accs) {
         setAccounts(accs)
-        setCurrentAccount(accs[0])
+        if (!currentAccount) setCurrentAccount(accs[0])
       }
     })
-  }, [setAccounts, setCurrentAccount])
+  }, [currentAccount, setAccounts, setCurrentAccount])
 
   const hasAccounts = accounts.length > 0
 
